@@ -1,0 +1,17 @@
+
+services:
+
+  adminer:
+    image: adminer:4.8.1
+    restart: unless-stopped
+    ports:
+      - 8888:8080
+
+  db:
+    image: postgres:14.2
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=translator_test_db
+      - POSTGRES_PASSWORD=mysecretpassword
