@@ -3,3 +3,8 @@
 !target/*-runner.jar
 !target/lib/*
 !target/quarkus-app/*
+!mvnw
+!.mvn
+!pom.xml
+!src
+!wait-for-postgres.sh
