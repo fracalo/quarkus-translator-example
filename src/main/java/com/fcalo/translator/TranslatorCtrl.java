@@ -88,7 +88,6 @@ public class TranslatorCtrl {
 
     @Route(path = "translation/category/:category", methods = Route.HttpMethod.GET, type = Route.HandlerType.BLOCKING, produces = MediaType.APPLICATION_JSON)
     public void getAllTranslationsByCategory(RoutingContext routingContext) {
-        logger.info("calling getAllTranslationsByCategory");
         var category_id = routingContext.pathParam("category");
         Long categoryId = null;
         try {

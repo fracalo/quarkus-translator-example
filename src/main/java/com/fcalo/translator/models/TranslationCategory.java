@@ -1,5 +1,6 @@
 package com.fcalo.translator.models;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @NamedQuery(name = "TranslationCategory.findAll", query = "SELECT f FROM TranslationCategory f ", hints = @QueryHint(name = "org.hibernate.cacheable", value = "true"))
 @Table(name = "translation_categories")
 @Cacheable
+@RegisterForReflection
 public class TranslationCategory {
     @SequenceGenerator(name = "translationCatSeq", sequenceName = "translation_cat_id_seq", allocationSize = 1, initialValue = 1)
     @GeneratedValue(generator = "translationCatSeq", strategy = GenerationType.AUTO)

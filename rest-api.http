@@ -1,0 +1,64 @@
+GET http://localhost:8080/category
+Accept: application/json
+
+###
+GET http://localhost:8080/category/1
+Accept: application/json
+
+###
+# should receive error
+GET http://localhost:8080/category/pippo
+Accept: application/json
+
+###
+POST http://localhost:8080/category
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "greetings"
+}
+
+###
+PUT http://localhost:8080/category/2
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "school"
+}
+
+###
+DELETE http://localhost:8080/category/2
+Accept: application/json
+Content-Type: application/json
+
+###
+GET http://localhost:8080/translation/category/1
+Accept: application/json
+Content-Type: application/json
+
+###
+GET http://localhost:8080/translation/1
+Accept: application/json
+Content-Type: application/json
+
+###
+DELETE http://localhost:8080/translation/1
+Accept: application/json
+Content-Type: application/json
+
+###
+POST http://localhost:8080/translation
+Accept: application/json
+Content-Type: application/json
+
+{
+  "en": "school",
+  "it": "scuola",
+  "fr": "ecole",
+  "categoryId": 1
+}
+
+
+
